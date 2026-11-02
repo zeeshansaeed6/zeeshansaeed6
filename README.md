@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://zeeshansaeed6.github.io"><img src="https://img.shields.io/badge/Portfolio-zeeshansaeed6.github.io-0A66C2?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"></a>
+  <a href="https://www.zeeshansaeed.me"><img src="https://img.shields.io/badge/Portfolio-zeeshansaeed.me-0A66C2?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"></a>
   <a href="https://linkedin.com/in/zeeshan-saeed0609"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:saeedzeeshan2003@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
