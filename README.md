@@ -3,7 +3,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Zeeshan%20Saeed&fontSize=62&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Engineer%20%7C%20GenAI%20Builder&descAlignY=58&descSize=20" alt="header" width="100%">
 </p>
 
-<!-- ===== TYPING ANIMATION ===== -->
 <p align="center">
   <a href="https://www.zeeshansaeed.me">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=700&height=50&lines=Full-Stack+Developer+%28MERN%29;Generative+AI+%26+LLM+Integration;Data+Structures+%26+Algorithms;Building+products+that+actually+ship" alt="Typing animation">
@@ -16,7 +15,6 @@
   <img src="https://img.shields.io/badge/Open%20to-Internships%20%26%20Entry--level%20roles-2ea44f?style=flat-square" alt="open to work">
 </p>
 
-<!-- ===== CONTACT BUTTONS ===== -->
 <p align="center">
   <a href="https://www.zeeshansaeed.me"><img src="https://img.shields.io/badge/Portfolio-Visit-6C5CE7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
   <a href="https://linkedin.com/in/zeeshan-saeed0609"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -25,7 +23,7 @@
 
 <p align="center">📧 <code>saeedzeeshan2003@gmail.com</code></p>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3&section=header" width="100%" alt="">
 
 ## 👨‍💻 About me
 
@@ -40,26 +38,15 @@ const zeeshan = {
 };
 ```
 
-- 💼 At AccioJob I built **14+ REST endpoints** (Node/Express, JWT, RBAC) and cut average API latency by **32%** with MongoDB aggregation and index tuning
-- 🔍 Built a private search engine with **sub-5ms** BM25 ranking, and a CNN with **94.2%** accuracy on MRI scans
-- 🏆 I enjoy hackathons: ship a working demo fast, then polish
+### ⚡ What I bring
 
----
+| ⚙️ Backend & APIs | 🤖 GenAI & ML | 🧪 Quality |
+|---|---|---|
+| 14+ REST endpoints with JWT and RBAC at AccioJob | LLM answer layer with grounded citations | 87/87 automated tests across 10 suites |
+| **32%** lower API latency from MongoDB aggregation and index tuning | CNN with **94.2%** accuracy and Grad-CAM explainability | Jest, Postman and code review habits |
+| Sub-100ms record lookups in College ERP | Gemini Vision and MCP projects | Dockerized FastAPI inference in **under 120ms** |
 
-## 🛠️ Tech stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=js,py,c,html,css,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=10" alt="Tech stack">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/LLM%20%26%20RAG-8E75B2?style=for-the-badge" alt="LLM & RAG">
-  <img src="https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini">
-  <img src="https://img.shields.io/badge/MCP-Model%20Context%20Protocol-black?style=for-the-badge" alt="MCP">
-  <img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white" alt="Twilio">
-</p>
-
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3&section=header" width="100%" alt="">
 
 ## 🚀 Featured projects
 
@@ -78,15 +65,13 @@ const zeeshan = {
   </tr>
 </table>
 
-### ✨ Project highlights
-
 | Project | Highlights |
 |---|---|
-| 🛡️ **Aegis Ultimate** | Zero-logging private search engine and Chromium browser running in volatile RAM. In-memory **BM25 ranking in under 5ms**, autonomous crawler, LLM answers with grounded citations, Web Time Machine. **87/87 tests** across 10 suites. |
-| 🍔 **FoodDash** | Multi-app food delivery platform (MERN + React Native). **Group ordering with split billing** cut group checkout time by about 40%. **Real-time surplus-food matching** pairs spare restaurant inventory with nearby demand. |
-| 🐍 **SerpentAI Ultra** | Gemini Vision snake identification from photos or webcam, venom risk ratings, snakebite symptom triage, nearest antivenom hospitals by GPS, chatbot, printable ER report, English / Hindi / Spanish. |
-| 🧠 **Brain Tumour Detection** | TensorFlow CNN on 3,000+ MRI scans: **94.2% accuracy, 0.93 F1**. Grad-CAM heatmaps for explainability, served by a FastAPI microservice in **under 120ms**. |
-| 🎓 **College ERP** | MERN system for attendance, grading and records. **4-tier RBAC** (Admin, Faculty, Student, Parent), **sub-100ms** lookups, event-driven SMS alerts via Twilio. |
+| 🛡️ **Aegis Ultimate** | Zero-logging private search engine and Chromium browser running in volatile RAM. In-memory **BM25 ranking in under 5ms**, autonomous crawler, LLM answers with grounded citations, Web Time Machine. |
+| 🍔 **FoodDash** | Multi-app food delivery platform (MERN + React Native). **Group ordering with split billing** cut group checkout time by about 40%. **Real-time surplus-food matching** for nearby demand. |
+| 🐍 **SerpentAI Ultra** | Gemini Vision snake identification from photos or webcam, venom risk ratings, symptom triage, nearest antivenom hospitals by GPS, chatbot, printable ER report, 3 languages. |
+| 🧠 **Brain Tumour Detection** | TensorFlow CNN on 3,000+ MRI scans: **94.2% accuracy, 0.93 F1**, Grad-CAM heatmaps, FastAPI service in **under 120ms**. |
+| 🎓 **College ERP** | MERN system with **4-tier RBAC**, **sub-100ms** lookups and event-driven Twilio SMS alerts. |
 | 🔐 **IntentLock** | Intent-bound purchase agent that only buys what the user approved. |
 | 🎙️ **Standup Chief of Staff** | MCP project for the Alexa+ track of the Amazon Developer Hackathon. |
 
@@ -102,9 +87,39 @@ const zeeshan = {
 
 </details>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3&section=header" width="100%" alt="">
 
-## 📊 GitHub stats
+## 🛠️ Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,py,c,html,css,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=10" alt="Tech stack">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/LLM%20%26%20RAG-8E75B2?style=for-the-badge" alt="LLM & RAG">
+  <img src="https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini">
+  <img src="https://img.shields.io/badge/MCP-Model%20Context%20Protocol-black?style=for-the-badge" alt="MCP">
+  <img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white" alt="Twilio">
+</p>
+
+## 📜 Certifications
+
+![AWS ML](https://img.shields.io/badge/AWS-Certified%20Machine%20Learning-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
+![AWS Cloud](https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![HackerRank](https://img.shields.io/badge/HackerRank-Software%20Engineer-00EA64?style=flat-square&logo=hackerrank&logoColor=black)
+![Snowflake](https://img.shields.io/badge/Snowflake-Generative%20AI%20Professional-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3&section=header" width="100%" alt="">
+
+## 🎯 Currently
+
+- 🔨 Building AI agents and full-stack apps for hackathons
+- 📚 Learning LLM / RAG integration, MCP and system design
+- 🧠 Practicing DSA on LeetCode
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3&section=header" width="100%" alt="">
+
+## 📈 Activity
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=zeeshansaeed6&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats">
@@ -116,11 +131,6 @@ const zeeshan = {
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zeeshansaeed6&theme=tokyo-night&hide_border=true&area=true" alt="Activity graph" width="95%">
-</p>
-
-<!-- ===== ANIMATED SNAKE (needs the snake.yml workflow, see setup notes) ===== -->
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/github-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/github-snake.svg">
@@ -128,29 +138,11 @@ const zeeshan = {
   </picture>
 </p>
 
----
-
-## 📜 Certifications
-
-![AWS ML](https://img.shields.io/badge/AWS-Certified%20Machine%20Learning-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-![AWS Cloud](https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![HackerRank](https://img.shields.io/badge/HackerRank-Software%20Engineer-00EA64?style=flat-square&logo=hackerrank&logoColor=black)
-![Snowflake](https://img.shields.io/badge/Snowflake-Generative%20AI%20Professional-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
-
----
-
-## 🎯 Currently
-
-- 🔨 Building AI agents and full-stack apps for hackathons
-- 📚 Learning LLM / RAG integration, MCP and system design
-- 🧠 Practicing DSA on LeetCode
-
 <p align="center">
   <i>Got an idea or an opportunity? Let's talk.</i><br>
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan">📧 saeedzeeshan2003@gmail.com</a>
 </p>
 
-<!-- ===== ANIMATED FOOTER ===== -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" alt="footer" width="100%">
 </p>
