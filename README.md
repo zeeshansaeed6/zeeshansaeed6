@@ -120,11 +120,30 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 <!-- ============ CERTS ============ -->
 ## 📜 Certifications
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AWS-Certified%20Machine%20Learning-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS ML">
-  <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Cloud">
-  <img src="https://img.shields.io/badge/HackerRank-Software%20Engineer-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank">
-  <img src="https://img.shields.io/badge/Snowflake-Generative%20AI%20Professional-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake">
+**☁️ Cloud & AI**
+
+<p>
+  <img src="https://img.shields.io/badge/AWS-Certified%20Machine%20Learning-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Certified Machine Learning">
+  <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Cloud Practitioner Essentials">
+  <img src="https://img.shields.io/badge/Oracle-Cloud%20Infrastructure%20AI%20Foundations%20Associate-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Cloud Infrastructure AI Foundations Associate">
+  <img src="https://img.shields.io/badge/Snowflake-Generative%20AI%20Professional-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake Generative AI Professional">
+  <img src="https://img.shields.io/badge/Google%20Cloud-AI-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud AI">
+  <img src="https://img.shields.io/badge/Microsoft%20Azure-AI%20Essentials-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Microsoft Azure AI Essentials">
+</p>
+
+**💻 Software engineering & problem solving**
+
+<p>
+  <img src="https://img.shields.io/badge/HackerRank-Software%20Engineer-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank Software Engineer">
+  <img src="https://img.shields.io/badge/HackerRank-Problem%20Solving%20(Intermediate)-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank Problem Solving Intermediate">
+</p>
+
+**🏢 Job simulations**
+
+<p>
+  <img src="https://img.shields.io/badge/Walmart%20USA%20(Forage)-Advanced%20Software%20Engineering-0071CE?style=for-the-badge&logo=walmart&logoColor=white" alt="Walmart USA Advanced Software Engineering on Forage">
+  <img src="https://img.shields.io/badge/BlackBird-Software%20Engineering%20Job%20Simulation-111827?style=for-the-badge" alt="BlackBird Software Engineering Job Simulation">
+  <img src="https://img.shields.io/badge/Deloitte%20Australia-Technology%20Job%20Simulation-86BC25?style=for-the-badge&logo=deloitte&logoColor=white" alt="Deloitte Australia Technology Job Simulation">
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
