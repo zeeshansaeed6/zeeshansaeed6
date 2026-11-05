@@ -1,64 +1,65 @@
-<!-- ============ HERO ============ -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/hero.svg" alt="Zeeshan Saeed" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://www.zeeshansaeed.me">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=720&height=50&lines=Building+full-stack+apps+that+scale;Teaching+LLMs+to+do+useful+work;Writing+clean%2C+tested+code;Always+shipping%2C+always+learning" alt="Typing animation">
-  </a>
+  <b>Software Engineer</b> · Full-Stack (MERN) · Generative AI Integration<br>
+  Hyderabad, India · Open to internships and entry-level roles
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=zeeshansaeed6&label=Profile%20views&color=0e75b6&style=flat-square" alt="views">
-  <img src="https://img.shields.io/badge/Hyderabad-India-FF9933?style=flat-square&logo=googlemaps&logoColor=white" alt="location">
-  <img src="https://img.shields.io/badge/Open%20to-Internships%20%26%20Entry--level%20roles-2ea44f?style=flat-square" alt="open to work">
-  <img src="https://img.shields.io/badge/CGPA-8.43%2F10-6C5CE7?style=flat-square" alt="CGPA">
+  <a href="https://www.zeeshansaeed.me"><img src="https://img.shields.io/badge/Portfolio-zeeshansaeed.me-0d1117?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
+  <a href="https://linkedin.com/in/zeeshan-saeed0609"><img src="https://img.shields.io/badge/LinkedIn-Zeeshan%20Saeed-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://leetcode.com/u/zeeshansaeed06/"><img src="https://img.shields.io/badge/LeetCode-zeeshansaeed06-FFA116?style=flat-square&logo=leetcode&logoColor=white" alt="LeetCode"></a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan"><img src="https://img.shields.io/badge/Email-saeedzeeshan2003%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
-<p align="center">
-  <a href="https://www.zeeshansaeed.me"><img src="https://img.shields.io/badge/Portfolio-Visit-6C5CE7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
-  <a href="https://linkedin.com/in/zeeshan-saeed0609"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://leetcode.com/u/zeeshansaeed06/"><img src="https://img.shields.io/badge/LeetCode-zeeshansaeed06-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode"></a>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan"><img src="https://img.shields.io/badge/Gmail-Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-</p>
+---
 
-<p align="center">📧 <code>saeedzeeshan2003@gmail.com</code></p>
+## About
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
-
-<!-- ============ ABOUT ============ -->
-## 👨‍💻 About me
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/terminal.svg" alt="Terminal intro" width="820">
-</p>
-
-I'm a software engineer with strong fundamentals in data structures, algorithms and scalable backend design, plus hands-on full-stack experience. I've shipped 6+ production-grade and AI-integrated projects, from a sub-5ms search engine to a computer vision model and a multi-app delivery platform.
-
-### 📈 Results at a glance
+Software engineer with strong fundamentals in data structures, algorithms and scalable backend architecture, plus hands-on full-stack experience. I've shipped 6+ production-grade and AI-integrated systems, including a sub-5ms in-memory search engine, a high-concurrency delivery platform and a computer vision model. I'm currently a Full-Stack Developer Intern, building REST APIs, optimizing database pipelines and writing automated tests.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/metrics.svg" alt="Key metrics" width="100%">
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
+---
 
-<!-- ============ TECH ============ -->
-## 🛠️ Tech stack
+## Experience
+
+**Full-Stack Developer Intern** · AccioJob · *May 2026 – Present*
+
+- Architected 14+ RESTful endpoints in Node.js/Express with JWT authentication and role-based access control.
+- Optimized MongoDB aggregation pipelines and indexing strategies, reducing average API response latency by **32%**.
+- Built modular React.js workflows with custom hooks and global state management, cutting redundant re-renders and improving load time on high-traffic views.
+
+## Education
+
+**BCA** · Osmania University (New Science Degree College), Hyderabad · *Aug 2024 – Jun 2027* · CGPA 8.43 / 10
+Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, Software Engineering
+
+---
+
+## Technical skills
+
+| | |
+|---|---|
+| **Languages** | JavaScript (ES6+), Python, C |
+| **Frontend** | React.js, React Native, HTML5, CSS3, Tailwind CSS |
+| **Backend** | Node.js, Express.js, FastAPI, RESTful API design |
+| **Databases** | MongoDB, SQL, PostgreSQL / Supabase |
+| **AI / ML** | LLM and RAG integration, Generative AI, TensorFlow, OpenCV, Pandas, NumPy |
+| **Tools & Cloud** | Git, GitHub, AWS, Docker, Postman, Jest, Twilio API |
+| **Concepts** | Data structures and algorithms, system design, Agile / SDLC, unit testing, code review |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/marquee.svg" alt="Scrolling tech stack" width="100%">
+  <img src="https://skillicons.dev/icons?i=js,py,c,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=9" alt="Technologies">
 </p>
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=js,py,c,html,css,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=10" alt="Tech stack">
-</p>
+---
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
-
-<!-- ============ PROJECTS ============ -->
-## 🚀 Featured projects
+## Featured projects
 
 <table>
   <tr>
@@ -66,48 +67,38 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
     <td width="50%"><a href="https://github.com/zeeshansaeed6/FoodDash"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=FoodDash&theme=tokyonight&hide_border=true" alt="FoodDash"></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/zeeshansaeed6/SerpentAI-"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=SerpentAI-&theme=tokyonight&hide_border=true" alt="SerpentAI"></a></td>
     <td width="50%"><a href="https://github.com/zeeshansaeed6/BrainTumorDetection"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=BrainTumorDetection&theme=tokyonight&hide_border=true" alt="Brain Tumour Detection"></a></td>
+    <td width="50%"><a href="https://github.com/zeeshansaeed6/CollegeERP"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=CollegeERP&theme=tokyonight&hide_border=true" alt="College ERP"></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/zeeshansaeed6/CollegeERP"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=CollegeERP&theme=tokyonight&hide_border=true" alt="College ERP"></a></td>
+    <td width="50%"><a href="https://github.com/zeeshansaeed6/SerpentAI-"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=SerpentAI-&theme=tokyonight&hide_border=true" alt="SerpentAI"></a></td>
     <td width="50%"><a href="https://github.com/zeeshansaeed6/IntentLock"><img src="https://github-readme-stats.vercel.app/api/pin/?username=zeeshansaeed6&repo=IntentLock&theme=tokyonight&hide_border=true" alt="IntentLock"></a></td>
   </tr>
 </table>
 
-<details open>
-<summary><b>✨ What each project does</b></summary>
+| Project | What it does | Stack |
+|---|---|---|
+| **Aegis Ultimate** | Zero-logging private search engine and Chromium browser running in volatile RAM. In-memory BM25 ranking with sub-5ms queries, an autonomous crawler with offline inverted indexing, and an LLM answer layer with grounded citations. 87/87 automated tests across 10 suites. | JavaScript, Node.js, Express.js |
+| **FoodDash** | Multi-app food delivery platform with group ordering and split billing (about 40% faster group checkout) and a real-time surplus-food matching engine. | MongoDB, Express.js, React, Node.js, React Native |
+| **Brain Tumour Detection** | CNN that classifies MRI scans: 94.2% validation accuracy and 0.93 F1 on 3,000+ scans. Grad-CAM heatmaps for explainability, served by a FastAPI microservice with sub-120ms predictions. | Python, TensorFlow, OpenCV, FastAPI |
+| **College ERP** | Student and administration management with 4-tier RBAC, sub-100ms record lookups and event-driven SMS alerts. | MERN, Twilio API |
+| **SerpentAI Ultra** | Snake species identification from photos or webcam with venom risk ratings, symptom triage, nearest antivenom hospitals by GPS and a printable medical report. | React, Node.js, Express, MongoDB, Gemini Vision |
+| **IntentLock** | Intent-bound purchase agent that only buys what the user approved. | LLM agents |
 
-<br>
-
-| Project | Highlights |
-|---|---|
-| 🛡️ **Aegis Ultimate** | Zero-logging private search engine and Chromium browser running in volatile RAM. In-memory **BM25 ranking in under 5ms**, autonomous crawler with offline inverted indexing, LLM answers with grounded citations, Web Time Machine. **87/87 tests** across 10 suites. |
-| 🍔 **FoodDash** | Multi-app food delivery platform (MERN + React Native). **Group ordering with split billing** cut group checkout time by about 40%. **Real-time surplus-food matching** pairs spare restaurant inventory with nearby demand. |
-| 🐍 **SerpentAI Ultra** | Gemini Vision snake identification from photos or webcam, venom risk ratings, symptom triage, nearest antivenom hospitals by GPS, chatbot, printable ER report, English / Hindi / Spanish. |
-| 🧠 **Brain Tumour Detection** | TensorFlow CNN on 3,000+ MRI scans: **94.2% accuracy, 0.93 F1**. Grad-CAM heatmaps for explainability, FastAPI service in **under 120ms**. |
-| 🎓 **College ERP** | MERN system with **4-tier RBAC** (Admin, Faculty, Student, Parent), **sub-100ms** lookups and event-driven Twilio SMS alerts. |
-| 🔐 **IntentLock** | Intent-bound purchase agent that only buys what the user approved. |
-| 🎙️ **Standup Chief of Staff** | MCP project for the Alexa+ track of the Amazon Developer Hackathon. |
-
-</details>
+**Hackathon work:** Standup Chief of Staff, an MCP project for the Alexa+ track of the Amazon Developer Hackathon.
 
 <details>
-<summary><b>📂 More projects</b></summary>
+<summary>More repositories</summary>
 
 <br>
 
-- 🛒 [E-CommWeb](https://github.com/zeeshansaeed6/E-CommWeb)
-- 🏍️ [Pro Moto Hub](https://github.com/zeeshansaeed6/pro-moto-hub)
-- ⚙️ [Conveyor Belt Manager](https://github.com/zeeshansaeed6/Conveyor-Belt-Manager)
-- 🌐 [Portfolio source](https://github.com/zeeshansaeed6/Portfolio)
+[E-CommWeb](https://github.com/zeeshansaeed6/E-CommWeb) · [Pro Moto Hub](https://github.com/zeeshansaeed6/pro-moto-hub) · [Conveyor Belt Manager](https://github.com/zeeshansaeed6/Conveyor-Belt-Manager) · [Portfolio source](https://github.com/zeeshansaeed6/Portfolio)
 
 </details>
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
+---
 
-<!-- ============ LEETCODE ============ -->
-## 🧩 Problem solving
+## Problem solving
 
 <p align="center">
   <a href="https://leetcode.com/u/zeeshansaeed06/">
@@ -115,81 +106,29 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
   </a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
+---
 
-<!-- ============ CERTS ============ -->
-## 📜 Certifications
+## Certifications
 
-**☁️ Cloud & AI**
+| Area | Certification |
+|---|---|
+| **Cloud and AI** | AWS Certified Machine Learning · AWS Cloud Practitioner Essentials · Oracle Cloud Infrastructure AI Foundations Associate · Snowflake Generative AI Professional · Google Cloud AI · Microsoft Azure AI Essentials |
+| **Software engineering** | HackerRank Software Engineer · HackerRank Problem Solving (Intermediate) |
+| **Job simulations** | Walmart USA (Forage): Advanced Software Engineering · BlackBird: Software Engineering · Deloitte Australia: Technology |
 
-<p>
-  <img src="https://img.shields.io/badge/AWS-Certified%20Machine%20Learning-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Certified Machine Learning">
-  <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS Cloud Practitioner Essentials">
-  <img src="https://img.shields.io/badge/Oracle-Cloud%20Infrastructure%20AI%20Foundations%20Associate-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Cloud Infrastructure AI Foundations Associate">
-  <img src="https://img.shields.io/badge/Snowflake-Generative%20AI%20Professional-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake Generative AI Professional">
-  <img src="https://img.shields.io/badge/Google%20Cloud-AI-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud AI">
-  <img src="https://img.shields.io/badge/Microsoft%20Azure-AI%20Essentials-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Microsoft Azure AI Essentials">
-</p>
+---
 
-**💻 Software engineering & problem solving**
-
-<p>
-  <img src="https://img.shields.io/badge/HackerRank-Software%20Engineer-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank Software Engineer">
-  <img src="https://img.shields.io/badge/HackerRank-Problem%20Solving%20(Intermediate)-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank Problem Solving Intermediate">
-</p>
-
-**🏢 Job simulations**
-
-<p>
-  <img src="https://img.shields.io/badge/Walmart%20USA%20(Forage)-Advanced%20Software%20Engineering-0071CE?style=for-the-badge&logo=walmart&logoColor=white" alt="Walmart USA Advanced Software Engineering on Forage">
-  <img src="https://img.shields.io/badge/BlackBird-Software%20Engineering%20Job%20Simulation-111827?style=for-the-badge" alt="BlackBird Software Engineering Job Simulation">
-  <img src="https://img.shields.io/badge/Deloitte%20Australia-Technology%20Job%20Simulation-86BC25?style=for-the-badge&logo=deloitte&logoColor=white" alt="Deloitte Australia Technology Job Simulation">
-</p>
-
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
-
-<!-- ============ ACTIVITY ============ -->
-## 📊 GitHub activity
+## GitHub stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=zeeshansaeed6&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeeshansaeed6&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=zeeshansaeed6&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeeshansaeed6&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages">
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=zeeshansaeed6&theme=tokyonight&hide_border=true" alt="GitHub streak">
-</p>
+---
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zeeshansaeed6&theme=tokyo-night&hide_border=true&area=true" alt="Activity graph" width="95%">
-</p>
+## Contact
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/github-snake.svg">
-    <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/github-snake.svg">
-  </picture>
-</p>
+Open to internships and entry-level full-stack or GenAI roles.
 
-<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
-
-<!-- ============ QUOTE + CONTACT ============ -->
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev quote">
-</p>
-
-## 🤝 Let's build something
-
-<p align="center">
-  <i>Got an idea, an internship or a project? I'd love to hear about it.</i><br><br>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan">📧 saeedzeeshan2003@gmail.com</a>
-  &nbsp;·&nbsp;
-  <a href="https://linkedin.com/in/zeeshan-saeed0609">💼 LinkedIn</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.zeeshansaeed.me">🌐 Portfolio</a>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" alt="footer" width="100%">
-</p>
+[Email](https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan) · [LinkedIn](https://linkedin.com/in/zeeshan-saeed0609) · [Portfolio](https://www.zeeshansaeed.me) · [LeetCode](https://leetcode.com/u/zeeshansaeed06/)
