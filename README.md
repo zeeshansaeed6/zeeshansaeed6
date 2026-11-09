@@ -1,6 +1,6 @@
 <!-- ============ HERO ============ -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/hero.svg?v=2" alt="Zeeshan Saeed" width="100%">
+  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/hero.svg?v=3" alt="Zeeshan Saeed, Full-Stack Developer and GenAI Engineer" width="100%">
 </p>
 
 <p align="center">
@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Hyderabad-India-FF9933?style=flat-square&logo=googlemaps&logoColor=white" alt="location">
-  <img src="https://img.shields.io/badge/Open%20to-Internships%20%26%20Entry--level%20roles-2ea44f?style=flat-square" alt="open to work">
-  <img src="https://img.shields.io/badge/CGPA-8.43%2F10-6C5CE7?style=flat-square" alt="CGPA">
+  <img src="https://img.shields.io/badge/Hyderabad-India-FF9933?style=flat-square&logo=googlemaps&logoColor=white" alt="Location: Hyderabad, India">
+  <img src="https://img.shields.io/badge/Open%20to-Internships%20%26%20Entry--level%20roles-2ea44f?style=flat-square" alt="Open to internships and entry-level roles">
+  <img src="https://img.shields.io/badge/CGPA-8.43%2F10-6C5CE7?style=flat-square" alt="CGPA 8.43 out of 10">
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 ## 👨‍💻 About me
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/terminal.svg?v=2" alt="Terminal intro" width="460">
+  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/terminal.svg?v=3" alt="Terminal-style introduction" width="420">
 </p>
 
 I'm a software engineer with strong fundamentals in data structures, algorithms and scalable backend design, plus hands-on full-stack experience. I've shipped 6+ production-grade and AI-integrated projects, from a sub-5ms search engine to a computer vision model and a multi-app delivery platform.
@@ -38,7 +38,20 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 ### 📈 Results at a glance
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/metrics.svg?v=2" alt="Key metrics" width="520">
+  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/metrics.svg?v=3" alt="Key metrics: 32% API latency cut, under 5ms search, 94.2% model accuracy, 87 of 87 tests passing, 180+ LeetCode problems, 14+ REST endpoints" width="340">
+</p>
+
+<p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
+
+<!-- ============ EXPERIENCE ============ -->
+## 💼 Experience & education
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-experience.svg?v=3" alt="Full-Stack Developer Intern at AccioJob" width="420">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-education.svg?v=3" alt="BCA at Osmania University" width="420">
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
@@ -47,7 +60,7 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 ## 🛠️ Tech stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,py,c,html,css,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=7" alt="Tech stack">
+  <img src="https://skillicons.dev/icons?i=js,py,c,html,css,react,tailwind,nodejs,express,fastapi,mongodb,postgres,supabase,tensorflow,opencv,aws,docker,git,postman,jest&perline=7" alt="Technologies: JavaScript, Python, C, HTML, CSS, React, Tailwind, Node.js, Express, FastAPI, MongoDB, PostgreSQL, Supabase, TensorFlow, OpenCV, AWS, Docker, Git, Postman, Jest">
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/divider.svg" width="100%" alt=""></p>
@@ -56,27 +69,27 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 ## 🚀 Featured projects
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/Aegis-Ultimate"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-aegis.svg?v=2" alt="Aegis Ultimate" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/Aegis-Ultimate"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-aegis.svg?v=3" alt="Aegis Ultimate" width="420"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/FoodDash"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-fooddash.svg?v=2" alt="FoodDash" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/FoodDash"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-fooddash.svg?v=3" alt="FoodDash" width="420"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/SerpentAI-"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-serpentai.svg?v=2" alt="SerpentAI Ultra" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/SerpentAI-"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-serpentai.svg?v=3" alt="SerpentAI Ultra" width="420"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/BrainTumorDetection"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-braintumour.svg?v=2" alt="Brain Tumour Detection" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/BrainTumorDetection"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-braintumour.svg?v=3" alt="Brain Tumour Detection" width="420"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/CollegeERP"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-erp.svg?v=2" alt="College ERP" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/CollegeERP"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-erp.svg?v=3" alt="College ERP" width="420"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeeshansaeed6/IntentLock"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-intentlock.svg?v=2" alt="IntentLock" width="460"></a>
+  <a href="https://github.com/zeeshansaeed6/IntentLock"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/card-intentlock.svg?v=3" alt="IntentLock" width="420"></a>
 </p>
 
 **Hackathon work:** [Standup Chief of Staff](https://github.com/zeeshansaeed6/Standup-Chief-of-Staff), an MCP project for the Alexa+ track of the Amazon Developer Hackathon.
@@ -100,7 +113,7 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 
 <p align="center">
   <a href="https://leetcode.com/u/zeeshansaeed06/">
-    <img src="https://leetcard.jacoblin.cool/zeeshansaeed06?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats" width="560">
+    <img src="https://leetcard.jacoblin.cool/zeeshansaeed06?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats: 180 problems solved" width="520">
   </a>
 </p>
 
@@ -166,5 +179,5 @@ I'm a software engineer with strong fundamentals in data structures, algorithms 
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="footer" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="" width="100%">
 </p>
