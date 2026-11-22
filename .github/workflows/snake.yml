@@ -1,4 +1,7 @@
-name: Generate Snake
+name: Generate profile assets
+
+# Builds the contribution snake and the GitHub stats cards, then publishes them
+# to the `output` branch that the README points at.
 
 on:
   schedule:
@@ -7,23 +10,46 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/workflows/snake.yml
+      - scripts/generate-stats.mjs
+      - scripts/theme.mjs
+      - assets/fonts/**
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate stats cards
+        run: node scripts/generate-stats.mjs dist
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          # Optional: add a STATS_TOKEN secret (a classic PAT with read:user)
+          # to include private contributions. Falls back to the workflow token.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.svg?color_snake=#8a6414&color_dots=#ebedf0,#b3e0da,#6cc3b8,#2a9d92,#0b7a70
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#d6aa5c&color_dots=#161b22,#103b37,#14655d,#1f9186,#3fbfb0
 
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
+      - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
