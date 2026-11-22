@@ -1,6 +1,6 @@
 <!-- Images are generated. Static ones: node scripts/build-assets.mjs. Stats and snake: .github/workflows/snake.yml -->
 
-<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/hero.svg?v=5edd6132"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/hero.svg?v=0dc432e0" alt="Zeeshan Saeed. Full-stack and GenAI engineer in Hyderabad, India. Software Developer Intern at AccioJob and final-year BCA student. Open to internships and entry-level roles." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/hero.svg?v=59a88400"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/hero.svg?v=32b262fd" alt="Zeeshan Saeed. Software developer and GenAI engineer in Hyderabad, India. Software Developer Intern at AccioJob and final-year BCA student. Open to internships and entry-level roles." width="100%"></picture>
 
 **[zeeshansaeed.me](https://www.zeeshansaeed.me)** &emsp; [LinkedIn](https://linkedin.com/in/zeeshan-saeed0609) &emsp; [LeetCode](https://leetcode.com/u/zeeshansaeed06/) &emsp; [Email me](https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan)
 

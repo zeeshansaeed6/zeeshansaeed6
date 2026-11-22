@@ -14,7 +14,7 @@ import { FONTS, THEMES, measure, round, svgDocument, text, wrap } from "./theme.
 
 const HERO = {
   name: "Zeeshan Saeed",
-  role: "Full-stack and GenAI engineer in Hyderabad, India",
+  role: "Software developer and GenAI engineer in Hyderabad, India",
   now: "Software Developer Intern at AccioJob, final-year BCA student",
   status: "Open to internships and entry-level roles",
 };
