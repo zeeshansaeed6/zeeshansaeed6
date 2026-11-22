@@ -51,24 +51,25 @@ I build backends that stay fast under load and AI features that do real work. Re
 
 ## Certifications
 
-<!-- Link a certification to make it verifiable: - [AWS Certified Machine Learning](https://www.credly.com/badges/...) -->
+<!-- Linked certificates open the issuer's own page or certificate, so they can be verified. -->
 
 **Cloud and AI**
+- [Oracle Cloud Infrastructure AI Foundations Associate](https://catalog-education.oracle.com/ords/certview/sharebadge?id=D9736F27568B9DCF0CD9348125D52972CD4235B2FB7007807A136F901E1CD2C1)
+- [Microsoft Azure AI Essentials Professional Certificate](https://www.linkedin.com/learning/certificates/06d69d5b104b470fedc5b6c45bbb7fac179a055a9d7c9e7d6cfbf6c6e7b58af4) (Microsoft and LinkedIn)
+- [Generative AI Professional Certificate](https://www.linkedin.com/learning/certificates/86618d304861dc809c0032d5e6929ae2f1ab6816aa755463ebcae1f9dfd2ed2d) (Snowflake)
+- [AWS Cloud Practitioner Essentials](https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7) (course)
 - AWS Certified Machine Learning
-- AWS Cloud Practitioner Essentials
-- Oracle Cloud Infrastructure AI Foundations Associate
-- Snowflake Generative AI Professional
 - Google Cloud AI
-- Microsoft Azure AI Essentials
 
 **Software engineering**
-- HackerRank Software Engineer
-- HackerRank Problem Solving (Intermediate)
+- [HackerRank Software Engineer](https://www.hackerrank.com/certificates/7c6991d9ae07)
+- [HackerRank Software Engineer Intern](https://www.hackerrank.com/certificates/cd822a671276)
+- [HackerRank Problem Solving (Intermediate)](https://www.hackerrank.com/certificates/ebdd4035ec3f)
 
-**Job simulations**
-- Advanced Software Engineering, Walmart USA (Forage)
-- Software Engineering, BlackBird
-- Technology, Deloitte Australia
+**Job simulations (Forage)**
+- [Advanced Software Engineering, Walmart USA](https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_ippeEcXucZg6c6PkW_1792133744149_completion_certificate.pdf)
+- [Software Engineering, BlackBird](https://www.theforage.com/completion-certificates/nWHPnWj8YqGJh5kQB/8XSySTLv68WYeFhke_nWHPnWj8YqGJh5kQB_ippeEcXucZg6c6PkW_1792581563410_completion_certificate.pdf)
+- [Technology, Deloitte Australia](https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_ippeEcXucZg6c6PkW_1792569668478_completion_certificate.pdf)
 
 ## On GitHub
 
