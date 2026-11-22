@@ -32,12 +32,12 @@ I build backends that stay fast under load and AI features that do real work. Re
 </p>
 
 <details>
-<summary>Smaller projects</summary>
+<summary>More projects</summary>
 
-- [E-CommWeb](https://github.com/zeeshansaeed6/E-CommWeb)
-- [Pro Moto Hub](https://github.com/zeeshansaeed6/pro-moto-hub)
-- [Conveyor Belt Manager](https://github.com/zeeshansaeed6/Conveyor-Belt-Manager)
-- [Source for my portfolio site](https://github.com/zeeshansaeed6/Portfolio)
+- [OmniMarket](https://github.com/zeeshansaeed6/E-CommWeb): multi-vendor marketplace on MERN with Stripe escrow payments, split fulfilment per vendor and multi-currency pricing.
+- [Pro Moto Hub](https://github.com/zeeshansaeed6/pro-moto-hub): website for a two-wheeler service business in Hyderabad, with services, a gallery, reviews and visit booking.
+- [Conveyor Belt Manager](https://github.com/zeeshansaeed6/Conveyor-Belt-Manager): SCADA-style dashboard for monitoring and controlling conveyor belts, built to work on phones.
+- [Portfolio](https://github.com/zeeshansaeed6/Portfolio): source for [zeeshansaeed.me](https://www.zeeshansaeed.me), built with React, Three.js and GSAP.
 
 </details>
 
