@@ -2,10 +2,12 @@
 //
 //   node scripts/build-assets.mjs
 //
-// writes assets/dark/*.svg and assets/light/*.svg. Edit the content below
+// writes assets/dark/*.svg and assets/light/*.svg, then updates the version
+// tags on the README image links. Edit the content below
 // (projects, experience, stack) and re-run; text wraps automatically.
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { FONTS, THEMES, measure, round, svgDocument, text, wrap } from "./theme.mjs";
 
 // ---------------------------------------------------------------- content --
@@ -303,4 +305,16 @@ for (const [name, theme] of Object.entries(THEMES)) {
     writeFileSync(`${dir}/${file}.svg`, svg);
     console.log(`${dir}/${file}.svg  ${(svg.length / 1024).toFixed(1)} KB`);
   }
+}
+
+// Stamp each image link in the README with a hash of the file, so browsers
+// and GitHub's image cache fetch an image again as soon as it changes.
+const README = "README.md";
+const IMAGE_LINK = /(main\/(assets\/(?:dark|light)\/[a-z-]+\.svg))(?:\?v=[0-9a-f]+)?/g;
+const readme = readFileSync(README, "utf8");
+const stamped = readme.replace(IMAGE_LINK, (_, link, path) =>
+  `${link}?v=${createHash("sha256").update(readFileSync(path)).digest("hex").slice(0, 8)}`);
+if (stamped !== readme) {
+  writeFileSync(README, stamped);
+  console.log("README image links re-stamped.");
 }
