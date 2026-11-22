@@ -11,7 +11,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { FONTS, THEMES, round, svgDocument, text } from "./theme.mjs";
+import { FONTS, THEMES, measure, round, svgDocument, text } from "./theme.mjs";
 
 const OUT_DIR = process.argv[2] ?? "dist";
 const USER = process.env.LEETCODE_USER;
@@ -66,16 +66,21 @@ const summarise = (data) => {
 const WIDTH = 1000;
 const PAD = 28;
 
+const BAR_X = 520;
+
 const renderCard = ({ solved, ranking, levels }, theme) => {
+  // Shrink the headline as the count grows, so it never runs into the bars.
+  const headline = `${solved.toLocaleString("en-US")} problems solved`;
+  const headlineSize = Math.min(30, Math.floor(((BAR_X - PAD * 2) / measure(headline, FONTS.display, 1)) * 10) / 10);
   const parts = [
     text({ x: PAD, y: PAD + 24, value: "LeetCode", font: FONTS.display, size: 22, fill: theme.text }),
-    text({ x: PAD, y: PAD + 92, value: `${solved.toLocaleString("en-US")} problems solved`, font: FONTS.display, size: 30, fill: theme.accent }),
+    text({ x: PAD, y: PAD + 92, value: headline, font: FONTS.display, size: headlineSize, fill: theme.accent }),
   ];
   if (ranking) {
     parts.push(text({ x: PAD, y: PAD + 124, value: `Ranked ${ranking.toLocaleString("en-US")} worldwide`, font: FONTS.text, size: 15.5, fill: theme.muted }));
   }
 
-  const barX = 520;
+  const barX = BAR_X;
   const barWidth = WIDTH - PAD - barX;
   let y = PAD + 4;
   for (const level of levels) {
