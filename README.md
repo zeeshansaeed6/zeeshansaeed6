@@ -34,6 +34,9 @@ I build backends that stay fast under load and AI features that do real work. Re
 <details>
 <summary>More projects</summary>
 
+- [Zoffice](https://github.com/zeeshansaeed6/Zoffice): offline-first desktop office suite for documents, spreadsheets and slides, built with Electron, React and SQLite. No accounts or telemetry; six languages.
+- [StockFlow](https://github.com/zeeshansaeed6/stockflow-inventory-mvp): multi-tenant SaaS inventory app with fully isolated data per organization, supplier tracking, low-stock alerts and a stock-movement history.
+- [Healthcare Backend API](https://github.com/zeeshansaeed6/whatbytes): Django REST Framework and PostgreSQL API where users manage private patient records and assign shared doctors, with JWT auth.
 - [OmniMarket](https://github.com/zeeshansaeed6/E-CommWeb): multi-vendor marketplace on MERN with Stripe escrow payments, split fulfilment per vendor and multi-currency pricing.
 - [Pro Moto Hub](https://github.com/zeeshansaeed6/pro-moto-hub): website for a two-wheeler service business in Hyderabad, with services, a gallery, reviews and visit booking.
 - [Conveyor Belt Manager](https://github.com/zeeshansaeed6/Conveyor-Belt-Manager): SCADA-style dashboard for monitoring and controlling conveyor belts, built to work on phones.
