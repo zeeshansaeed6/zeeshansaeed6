@@ -98,7 +98,6 @@ const renderCard = ({ solved, ranking, levels }, theme) => {
     + levels.map((level) => `${level.difficulty}: ${level.solved} of ${level.total}.`).join(" ");
   return svgDocument({
     width: WIDTH, height, label,
-    fonts: [FONTS.display, FONTS.text, FONTS.textBold],
     body: `<rect x=".5" y=".5" width="${WIDTH - 1}" height="${height - 1}" rx="12" fill="none" stroke="${theme.line}"/>\n${parts.join("\n")}`,
   });
 };

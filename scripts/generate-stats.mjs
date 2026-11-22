@@ -126,12 +126,11 @@ const summarise = (user) => {
 
 const WIDTH = 490;
 const PAD = 28;
-const ALL_FONTS = [FONTS.display, FONTS.text, FONTS.textBold];
 
 // Returns the card's natural height and a renderer, so the two cards shown
 // side by side can be drawn at the same height.
 const card = ({ height, label, body, theme }) => ({ height, render: (finalHeight) => svgDocument({
-  width: WIDTH, height: finalHeight, label, fonts: ALL_FONTS,
+  width: WIDTH, height: finalHeight, label,
   body: `<rect x=".5" y=".5" width="${WIDTH - 1}" height="${finalHeight - 1}" rx="12" fill="none" stroke="${theme.line}"/>\n${body}`,
 }) });
 

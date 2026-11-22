@@ -5,6 +5,8 @@
 // writes assets/dark/*.svg and assets/light/*.svg, then updates the version
 // tags on the README image links. Edit the content below
 // (projects, experience, stack) and re-run; text wraps automatically.
+// Install fonttools first (pip install fonttools brotli) so each image embeds
+// only the glyphs it uses; without it the images still build, just larger.
 
 import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -153,7 +155,6 @@ ${text({ x: 24, y: 226, value: HERO.status, font: FONTS.textBold, size: 18, fill
   return svgDocument({
     width, height, css, body,
     label: `${HERO.name}. ${HERO.role}. ${HERO.now}. ${HERO.status}.`,
-    fonts: [FONTS.display, FONTS.text, FONTS.textBold],
   });
 };
 
@@ -199,7 +200,6 @@ const layoutProject = (project, theme, width) => {
   const render = (height) => svgDocument({
     width, height,
     label: `${project.title}: ${project.kind}. ${project.summary} ${project.specs.map(([l, v]) => `${l}: ${v}.`).join(" ")}`,
-    fonts: [FONTS.display, FONTS.text, FONTS.textBold],
     body: `<rect x=".5" y=".5" width="${width - 1}" height="${round(height - 1)}" rx="12" fill="none" stroke="${theme.line}"/>\n${parts.join("\n")}`,
   });
   return { height: contentHeight, render };
@@ -257,7 +257,6 @@ const renderTimeline = (theme) => {
   return svgDocument({
     width, height,
     label: TIMELINE.map((entry) => `${entry.title}, ${entry.place}, ${entry.dates}. ${entry.points.join(" ")}`).join(" "),
-    fonts: [FONTS.display, FONTS.text, FONTS.textBold],
     body: `${rail}${dots}\n${parts.join("\n")}`,
   });
 };
@@ -285,7 +284,6 @@ const renderStack = (theme) => {
   return svgDocument({
     width, height: STACK.length * rowHeight,
     label: STACK.map(([label, items]) => `${label}: ${items.join(", ")}.`).join(" "),
-    fonts: [FONTS.text, FONTS.textBold],
     body: parts.join("\n"),
   });
 };

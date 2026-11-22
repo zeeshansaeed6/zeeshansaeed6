@@ -35,6 +35,16 @@ jobs:
         with:
           node-version: 22
 
+      # fonttools trims the embedded fonts down to the characters each card
+      # uses. If it fails to install, the cards still build with full fonts.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install font subsetter
+        run: pip install fonttools brotli
+        continue-on-error: true
+
       - name: Generate stats cards
         run: node scripts/generate-stats.mjs dist
         env:

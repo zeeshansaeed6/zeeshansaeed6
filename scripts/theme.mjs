@@ -6,7 +6,10 @@
 // Every image is drawn on a transparent background so it sits on GitHub's
 // own page colour, and each one is rendered once per theme.
 
-import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const FONT_DIR = fileURLToPath(new URL("../assets/fonts/", import.meta.url));
@@ -28,8 +31,10 @@ export const THEMES = {
   },
 };
 
-// Fonts are subset to Latin and embedded as data URIs, because an SVG shown
-// through <img> cannot load anything from the network.
+// Fonts are embedded as data URIs, because an SVG shown through <img> cannot
+// load anything from the network. Each image gets a copy cut down to just the
+// characters it uses (via fonttools' pyftsubset), which keeps the images small.
+// Without pyftsubset installed, the full Latin subset is embedded instead.
 // Anybody (wdth 135, wght 800) sets names and titles; IBM Plex Sans sets text.
 export const FONTS = {
   display: { file: "anybody-display", family: "ZS Display", weight: 800 },
@@ -38,15 +43,57 @@ export const FONTS = {
 };
 
 const METRICS = JSON.parse(readFileSync(`${FONT_DIR}metrics.json`, "utf8"));
-const fontData = new Map();
+const subsets = new Map();
+let canSubset = true;
 
-const fontFace = (font) => {
-  if (!fontData.has(font.file)) {
-    fontData.set(font.file, readFileSync(`${FONT_DIR}${font.file}.woff2`).toString("base64"));
+const fontBase64 = (font, characters) => {
+  const key = `${font.file}:${characters}`;
+  if (subsets.has(key)) return subsets.get(key);
+  const source = `${FONT_DIR}${font.file}.woff2`;
+  let data = null;
+  if (canSubset) {
+    const dir = mkdtempSync(join(tmpdir(), "font-"));
+    try {
+      const output = join(dir, "subset.woff2");
+      execFileSync("pyftsubset", [source, `--text=${characters}`, "--flavor=woff2",
+        "--layout-features=kern,liga,tnum,lnum", `--output-file=${output}`], { stdio: "pipe" });
+      data = readFileSync(output);
+    } catch {
+      canSubset = false;
+      console.warn("pyftsubset not available; embedding full fonts.");
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   }
-  return `@font-face{font-family:"${font.family}";font-weight:${font.weight};`
-    + `src:url(data:font/woff2;base64,${fontData.get(font.file)}) format("woff2")}`;
+  const encoded = (data ?? readFileSync(source)).toString("base64");
+  subsets.set(key, encoded);
+  return encoded;
 };
+
+const unescapeXml = (value) =>
+  value.replace(/&(amp|lt|gt|quot);/g, (_, name) => ({ amp: "&", lt: "<", gt: ">", quot: '"' })[name]);
+
+// Collects the characters each font draws in an SVG body built with text().
+const charactersByFont = (body) => {
+  const used = new Map();
+  for (const [, family, weight, content] of body.matchAll(/<text[^>]*font-family='([^']*)'[^>]*font-weight="(\d+)"[^>]*>([\s\S]*?)<\/text>/g)) {
+    const font = family.includes(FONTS.display.family) ? FONTS.display
+      : weight === String(FONTS.textBold.weight) ? FONTS.textBold : FONTS.text;
+    const chars = used.get(font) ?? new Set();
+    for (const char of unescapeXml(content.replace(/<[^>]*>/g, ""))) chars.add(char);
+    used.set(font, chars);
+  }
+  return used;
+};
+
+const fontFaces = (body) =>
+  [...charactersByFont(body)]
+    .map(([font, chars]) => {
+      const characters = [...chars].sort().join("");
+      return `@font-face{font-family:"${font.family}";font-weight:${font.weight};`
+        + `src:url(data:font/woff2;base64,${fontBase64(font, characters)}) format("woff2")}`;
+    })
+    .join("");
 
 export const measure = (text, font, size) => {
   const { upm, adv } = METRICS[font.file];
@@ -90,8 +137,8 @@ export const text = ({ x, y, value, font, size, fill, anchor, extra = "" }) => {
 
 export const round = (value) => Math.round(value * 100) / 100;
 
-export const svgDocument = ({ width, height, label, fonts, css = "", body }) => {
-  const faces = [...new Set(fonts)].map(fontFace).join("");
+export const svgDocument = ({ width, height, label, css = "", body }) => {
+  const faces = fontFaces(body);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${round(height)}" viewBox="0 0 ${width} ${round(height)}" role="img" aria-label="${escapeXml(label)}">
 <title>${escapeXml(label)}</title>
 <style>${faces}text{font-variant-numeric:tabular-nums;font-kerning:normal}${css}</style>
