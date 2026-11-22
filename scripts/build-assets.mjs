@@ -115,28 +115,78 @@ const octagram = (cx, cy, r) => {
   return square([[-s, -s], [s, -s], [s, s], [-s, s]]) + square([[0, -r], [r, 0], [0, r], [-r, 0]]);
 };
 
+const heroCss = (theme) => `
+.s{fill:none;stroke:${theme.accent};stroke-width:1.25;stroke-opacity:.7;stroke-dasharray:1;animation:draw 1.4s cubic-bezier(.4,0,.2,1) both}
+.b{fill:${theme.brass};animation:show .6s ease-out .1s both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes show{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.s,.b{animation:none}}`;
+
+// Stars on a grid of `cell`, each delayed by its distance from `origin`, so
+// the lattice grows outward from the brass star.
+const lattice = ({ origin, cell, top, bottom, left, right }) => {
+  const stars = [];
+  for (let cy = top; cy < bottom + cell; cy += cell) {
+    for (let cx = right; cx > left; cx -= cell) {
+      const distance = Math.hypot(cx - origin.x, cy - origin.y);
+      stars.push(`<path pathLength="1" class="s" style="animation-delay:${round(0.3 + distance / 380)}s" d="${octagram(cx, cy, cell / 2)}"/>`);
+    }
+  }
+  return stars.join("");
+};
+
+const fitSize = (value, font, maxSize, maxWidth) =>
+  Math.min(maxSize, Math.floor((maxWidth / measure(value, font, 1)) * 10) / 10);
+
+const NARROW = 490;
+
+// Phone layout: the lattice sits in the top-right corner above the name.
+const renderHeroNarrow = (theme) => {
+  const width = NARROW;
+  const cell = 48;
+  const origin = { x: width - 8 - cell, y: 8 + cell };
+  const nameSize = fitSize(HERO.name, FONTS.display, 46, width - 6);
+  const parts = [];
+  let y = 168;
+  parts.push(text({ x: 0, y, value: HERO.name, font: FONTS.display, size: nameSize, fill: theme.text, extra: ' letter-spacing="-0.5"' }));
+  y += 42;
+  for (const line of wrap(HERO.role, FONTS.text, 21, width - 4)) {
+    parts.push(text({ x: 1, y, value: line, font: FONTS.text, size: 21, fill: theme.text }));
+    y += 29;
+  }
+  y += 4;
+  for (const line of wrap(HERO.now, FONTS.text, 17, width - 4)) {
+    parts.push(text({ x: 1, y, value: line, font: FONTS.text, size: 17, fill: theme.muted }));
+    y += 25;
+  }
+  y += 10;
+  parts.push(`<circle cx="7" cy="${y - 6}" r="5" fill="${theme.brass}"/>`);
+  parts.push(text({ x: 21, y, value: HERO.status, font: FONTS.textBold, size: 17, fill: theme.text }));
+  const height = y + 10;
+  const body = `<defs>
+<linearGradient id="fade" x1="140" x2="330" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<radialGradient id="glow" cx="${origin.x}" cy="${origin.y}" r="190" gradientUnits="userSpaceOnUse"><stop offset=".3" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<mask id="m"><rect x="0" y="0" width="${width}" height="130" fill="url(#fade)"/></mask>
+<mask id="r"><rect x="0" y="0" width="${width}" height="130" fill="url(#glow)"/></mask>
+</defs>
+<g mask="url(#m)"><g mask="url(#r)">${lattice({ origin, cell, top: 8, bottom: 90, left: 120, right: width - 8 })}</g><path class="b" d="${octagram(origin.x, origin.y, cell / 2)}"/></g>
+${parts.join("\n")}`;
+  return svgDocument({
+    width, height, css: heroCss(theme), body,
+    label: `${HERO.name}. ${HERO.role}. ${HERO.now}. ${HERO.status}.`,
+  });
+};
+
 const renderHero = (theme) => {
   const width = 1000;
   const height = 264;
   const cell = 64;
   // The lattice grows outward from one brass star.
   const origin = { x: 1000 - 10 - cell * 2, y: 4 + cell * 2 };
-  const stars = [];
-  for (let cy = 4; cy < height + cell; cy += cell) {
-    for (let cx = 1000 - 10; cx > 660; cx -= cell) {
-      const distance = Math.hypot(cx - origin.x, cy - origin.y);
-      stars.push(`<path class="s" style="animation-delay:${round(0.3 + distance / 380)}s" d="${octagram(cx, cy, cell / 2)}"/>`);
-    }
-  }
   const brass = octagram(origin.x, origin.y, cell / 2);
 
   const nameSize = 60;
-  const css = `
-.s{fill:none;stroke:${theme.accent};stroke-width:1.25;stroke-opacity:.7;stroke-dasharray:1;animation:draw 1.4s cubic-bezier(.4,0,.2,1) both}
-.b{fill:${theme.brass};animation:show .6s ease-out .1s both}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes show{from{opacity:0}to{opacity:1}}
-@media (prefers-reduced-motion:reduce){.s,.b{animation:none}}`;
+  const css = heroCss(theme);
 
   const body = `<defs>
 <linearGradient id="fade" x1="700" x2="900" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
@@ -144,7 +194,7 @@ const renderHero = (theme) => {
 <mask id="m"><rect x="0" y="0" width="${width}" height="${height}" fill="url(#fade)"/></mask>
 <mask id="r"><rect x="0" y="0" width="${width}" height="${height}" fill="url(#glow)"/></mask>
 </defs>
-<g mask="url(#m)"><g mask="url(#r)">${stars.join("").replaceAll("<path", '<path pathLength="1"')}</g><path class="b" d="${brass}"/></g>
+<g mask="url(#m)"><g mask="url(#r)">${lattice({ origin, cell, top: 4, bottom: height, left: 660, right: 1000 - 10 })}</g><path class="b" d="${brass}"/></g>
 ${text({ x: 0, y: 96, value: HERO.name, font: FONTS.display, size: nameSize, fill: theme.text, extra: ' letter-spacing="-1"' })}
 ${text({ x: 2, y: 150, value: HERO.role, font: FONTS.text, size: 25, fill: theme.text })}
 ${text({ x: 2, y: 188, value: HERO.now, font: FONTS.text, size: 18, fill: theme.muted })}
@@ -197,8 +247,11 @@ const layoutProject = (project, theme, width) => {
   }
 
   const contentHeight = Math.max(y - 24 + 10, specY) + PAD - 10;
+  // Half-width cards carry a transparent strip below the border, so they
+  // keep a gap when they stack on narrow screens.
+  const gap = project.wide ? 0 : 14;
   const render = (height) => svgDocument({
-    width, height,
+    width, height: height + gap,
     label: `${project.title}: ${project.kind}. ${project.summary} ${project.specs.map(([l, v]) => `${l}: ${v}.`).join(" ")}`,
     body: `<rect x=".5" y=".5" width="${width - 1}" height="${round(height - 1)}" rx="12" fill="none" stroke="${theme.line}"/>\n${parts.join("\n")}`,
   });
@@ -212,6 +265,9 @@ const renderProjects = (theme) => {
   for (const project of wide) {
     const card = layoutProject(project, theme, 1000);
     files[project.file] = card.render(card.height);
+    // On phones the wide card is drawn like the others, specs below the text.
+    const narrow = layoutProject({ ...project, wide: false }, theme, NARROW);
+    files[`${project.file}-narrow`] = narrow.render(narrow.height);
   }
   for (let i = 0; i < half.length; i += 2) {
     const pair = half.slice(i, i + 2).map((project) => ({ project, card: layoutProject(project, theme, 490) }));
@@ -261,7 +317,79 @@ const renderTimeline = (theme) => {
   });
 };
 
+// Phone layout: dates sit above each title and the rail runs down the left.
+const renderTimelineNarrow = (theme) => {
+  const width = NARROW;
+  const railX = 7;
+  const contentX = 30;
+  const contentWidth = width - contentX;
+  const parts = [];
+  const nodes = [];
+  let y = 20;
+  for (const entry of TIMELINE) {
+    nodes.push(y - 5);
+    parts.push(text({ x: contentX, y, value: entry.dates, font: FONTS.textBold, size: 14.5, fill: theme.muted }));
+    y += 32;
+    const titleSize = fitSize(entry.title, FONTS.display, 21, contentWidth);
+    parts.push(text({ x: contentX, y, value: entry.title, font: FONTS.display, size: titleSize, fill: theme.text }));
+    y += 26;
+    for (const line of wrap(entry.place, FONTS.text, 15, contentWidth)) {
+      parts.push(text({ x: contentX, y, value: line, font: FONTS.text, size: 15, fill: theme.accent }));
+      y += 22;
+    }
+    y += 8;
+    for (const point of entry.points) {
+      parts.push(`<circle cx="${contentX + 3}" cy="${y - 5}" r="2.5" fill="${theme.muted}"/>`);
+      for (const line of wrap(point, FONTS.text, 15.5, contentWidth - 18)) {
+        parts.push(text({ x: contentX + 18, y, value: line, font: FONTS.text, size: 15.5, fill: theme.text }));
+        y += 23;
+      }
+      y += 6;
+    }
+    y += 30;
+  }
+  const height = y - 30;
+  const rail = `<line x1="${railX}" x2="${railX}" y1="${nodes[0]}" y2="${height - 10}" stroke="${theme.line}" stroke-width="2"/>`;
+  const dots = nodes.map((nodeY) => `<circle cx="${railX}" cy="${nodeY}" r="6" fill="${theme.brass}"/>`).join("");
+  return svgDocument({
+    width, height,
+    label: TIMELINE.map((entry) => `${entry.title}, ${entry.place}, ${entry.dates}. ${entry.points.join(" ")}`).join(" "),
+    body: `${rail}${dots}\n${parts.join("\n")}`,
+  });
+};
+
 // ------------------------------------------------------------------ stack --
+
+// Phone layout: each group's label sits above its items, which wrap.
+const renderStackNarrow = (theme) => {
+  const width = NARROW;
+  const gap = 24;
+  const parts = [];
+  let y = 0;
+  STACK.forEach(([label, items], row) => {
+    if (row > 0) parts.push(`<line x1="0" x2="${width}" y1="${y}" y2="${y}" stroke="${theme.line}"/>`);
+    y += 28;
+    parts.push(text({ x: 0, y, value: label, font: FONTS.textBold, size: 14.5, fill: theme.muted }));
+    y += 28;
+    let x = 0;
+    for (const item of items) {
+      const itemWidth = measure(item, FONTS.text, 16.5);
+      if (x > 0 && x + itemWidth > width) {
+        x = 0;
+        y += 26;
+      }
+      parts.push(text({ x, y, value: item, font: FONTS.text, size: 16.5, fill: theme.text }));
+      x += itemWidth + gap;
+    }
+    y += 16;
+  });
+  return svgDocument({
+    width, height: y,
+    label: STACK.map(([label, items]) => `${label}: ${items.join(", ")}.`).join(" "),
+    body: parts.join("\n"),
+  });
+};
+
 
 const renderStack = (theme) => {
   const width = 1000;
@@ -295,8 +423,11 @@ for (const [name, theme] of Object.entries(THEMES)) {
   mkdirSync(dir, { recursive: true });
   const files = {
     hero: renderHero(theme),
+    "hero-narrow": renderHeroNarrow(theme),
     experience: renderTimeline(theme),
+    "experience-narrow": renderTimelineNarrow(theme),
     stack: renderStack(theme),
+    "stack-narrow": renderStackNarrow(theme),
     ...renderProjects(theme),
   };
   for (const [file, svg] of Object.entries(files)) {

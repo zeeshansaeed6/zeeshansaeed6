@@ -17,7 +17,12 @@ const OUT_DIR = process.argv[2] ?? "dist";
 const USER = process.env.LEETCODE_USER;
 const FIXTURE = process.env.LEETCODE_FIXTURE;
 const REPOSITORY = process.env.GITHUB_REPOSITORY;
-const OUTPUTS = [["leetcode.svg", THEMES.dark], ["leetcode-light.svg", THEMES.light]];
+const OUTPUTS = [
+  ["leetcode.svg", THEMES.dark, false],
+  ["leetcode-light.svg", THEMES.light, false],
+  ["leetcode-narrow.svg", THEMES.dark, true],
+  ["leetcode-narrow-light.svg", THEMES.light, true],
+];
 const DIFFICULTIES = ["Easy", "Medium", "Hard"];
 
 const QUERY = `
@@ -63,29 +68,32 @@ const summarise = (data) => {
   };
 };
 
-const WIDTH = 1000;
 const PAD = 28;
 
 const BAR_X = 520;
 
-const renderCard = ({ solved, ranking, levels }, theme) => {
-  // Shrink the headline as the count grows, so it never runs into the bars.
+// Wide layout puts the bars beside the headline; the narrow (phone) layout
+// stacks them underneath.
+const renderCard = ({ solved, ranking, levels }, theme, narrow) => {
+  const width = narrow ? 490 : 1000;
   const headline = `${solved.toLocaleString("en-US")} problems solved`;
-  const headlineSize = Math.min(30, Math.floor(((BAR_X - PAD * 2) / measure(headline, FONTS.display, 1)) * 10) / 10);
+  const headlineWidth = narrow ? width - PAD * 2 : BAR_X - PAD * 2;
+  // Shrink the headline as the count grows, so it always fits its column.
+  const headlineSize = Math.min(30, Math.floor((headlineWidth / measure(headline, FONTS.display, 1)) * 10) / 10);
   const parts = [
     text({ x: PAD, y: PAD + 24, value: "LeetCode", font: FONTS.display, size: 22, fill: theme.text }),
-    text({ x: PAD, y: PAD + 92, value: headline, font: FONTS.display, size: headlineSize, fill: theme.accent }),
+    text({ x: PAD, y: PAD + 76, value: headline, font: FONTS.display, size: headlineSize, fill: theme.accent }),
   ];
   if (ranking) {
-    parts.push(text({ x: PAD, y: PAD + 124, value: `Ranked ${ranking.toLocaleString("en-US")} worldwide`, font: FONTS.text, size: 15.5, fill: theme.muted }));
+    parts.push(text({ x: PAD, y: PAD + 106, value: `Ranked ${ranking.toLocaleString("en-US")} worldwide`, font: FONTS.text, size: 15.5, fill: theme.muted }));
   }
 
-  const barX = BAR_X;
-  const barWidth = WIDTH - PAD - barX;
-  let y = PAD + 4;
+  const barX = narrow ? PAD : BAR_X;
+  const barWidth = width - PAD - barX;
+  let y = narrow ? PAD + 126 : PAD + 4;
   for (const level of levels) {
     parts.push(text({ x: barX, y: y + 20, value: level.difficulty, font: FONTS.text, size: 15.5, fill: theme.text }));
-    parts.push(text({ x: WIDTH - PAD, y: y + 20, value: `${level.solved} of ${level.total.toLocaleString("en-US")}`, font: FONTS.textBold, size: 15, fill: theme.muted, anchor: "end" }));
+    parts.push(text({ x: width - PAD, y: y + 20, value: `${level.solved} of ${level.total.toLocaleString("en-US")}`, font: FONTS.textBold, size: 15, fill: theme.muted, anchor: "end" }));
     parts.push(`<rect x="${barX}" y="${y + 30}" width="${barWidth}" height="4" rx="2" fill="${theme.line}"/>`);
     // Keep a visible sliver for small counts, so a solved level never reads as empty.
     const filled = level.solved ? Math.max(4, (level.solved / (level.total || 1)) * barWidth) : 0;
@@ -93,28 +101,30 @@ const renderCard = ({ solved, ranking, levels }, theme) => {
     y += 48;
   }
 
-  const height = Math.max(y, PAD + 124) + PAD - 4;
+  const height = Math.max(y, PAD + 106) + PAD - 4;
   const label = `LeetCode: ${solved} problems solved${ranking ? `, ranked ${ranking} worldwide` : ""}. `
     + levels.map((level) => `${level.difficulty}: ${level.solved} of ${level.total}.`).join(" ");
   return svgDocument({
-    width: WIDTH, height, label,
-    body: `<rect x=".5" y=".5" width="${WIDTH - 1}" height="${height - 1}" rx="12" fill="none" stroke="${theme.line}"/>\n${parts.join("\n")}`,
+    width, height, label,
+    body: `<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="12" fill="none" stroke="${theme.line}"/>\n${parts.join("\n")}`,
   });
 };
 
+// Copies each previously published card that exists, one by one, so a card
+// added later (like the narrow ones) doesn't stop the others being reused.
 const copyPreviousCards = async () => {
   if (!REPOSITORY) throw new Error("No GITHUB_REPOSITORY set, so there are no previous cards to reuse.");
   for (const [file] of OUTPUTS) {
     const response = await fetch(`https://raw.githubusercontent.com/${REPOSITORY}/output/${file}`);
-    if (!response.ok) throw new Error(`No previous ${file} on the output branch (${response.status}).`);
-    writeFileSync(join(OUT_DIR, file), await response.text());
+    if (response.ok) writeFileSync(join(OUT_DIR, file), await response.text());
+    else console.warn(`::warning::No previous ${file} on the output branch (${response.status}).`);
   }
 };
 
 mkdirSync(OUT_DIR, { recursive: true });
 try {
   const summary = summarise(await fetchData());
-  for (const [file, theme] of OUTPUTS) writeFileSync(join(OUT_DIR, file), renderCard(summary, theme));
+  for (const [file, theme, narrow] of OUTPUTS) writeFileSync(join(OUT_DIR, file), renderCard(summary, theme, narrow));
   console.log(JSON.stringify(summary));
 } catch (error) {
   console.warn(`::warning::LeetCode card not refreshed: ${error.message}`);

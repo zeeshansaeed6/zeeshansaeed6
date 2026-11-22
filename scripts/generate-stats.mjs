@@ -129,8 +129,12 @@ const PAD = 28;
 
 // Returns the card's natural height and a renderer, so the two cards shown
 // side by side can be drawn at the same height.
+// The transparent strip under the border keeps a gap when the two cards stack
+// on narrow screens.
+const STACK_GAP = 14;
+
 const card = ({ height, label, body, theme }) => ({ height, render: (finalHeight) => svgDocument({
-  width: WIDTH, height: finalHeight, label,
+  width: WIDTH, height: finalHeight + STACK_GAP, label,
   body: `<rect x=".5" y=".5" width="${WIDTH - 1}" height="${finalHeight - 1}" rx="12" fill="none" stroke="${theme.line}"/>\n${body}`,
 }) });
 
