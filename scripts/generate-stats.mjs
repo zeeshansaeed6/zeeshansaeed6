@@ -108,6 +108,7 @@ const summarise = (user) => {
   const totalBytes = [...languageBytes.values()].reduce((sum, lang) => sum + lang.size, 0) || 1;
   const languages = [...languageBytes]
     .map(([name, { size }]) => ({ name, percent: (size / totalBytes) * 100 }))
+    .filter((language) => language.percent >= 0.5)
     .sort((a, b) => b.percent - a.percent)
     .slice(0, TOP_LANGUAGES);
 
