@@ -47,17 +47,28 @@ I build backends that stay fast under load and AI features that do real work. Re
 
 ## Problem solving
 
-<a href="https://leetcode.com/u/zeeshansaeed06/"><picture><source media="(prefers-color-scheme: light)" srcset="https://leetcard.jacoblin.cool/zeeshansaeed06?theme=light&font=IBM%20Plex%20Sans&ext=heatmap&border=0&radius=12"><img src="https://leetcard.jacoblin.cool/zeeshansaeed06?theme=dark&font=IBM%20Plex%20Sans&ext=heatmap&border=0&radius=12" alt="LeetCode stats and submission heatmap" width="500"></picture></a>
+<a href="https://leetcode.com/u/zeeshansaeed06/"><picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/leetcode-light.svg"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/output/leetcode.svg" alt="LeetCode: problems solved by difficulty and global ranking" width="100%"></picture></a>
 
 ## Certifications
 
 <!-- Link a certification to make it verifiable: - [AWS Certified Machine Learning](https://www.credly.com/badges/...) -->
 
-**Cloud and AI:** AWS Certified Machine Learning, AWS Cloud Practitioner Essentials, Oracle Cloud Infrastructure AI Foundations Associate, Snowflake Generative AI Professional, Google Cloud AI, Microsoft Azure AI Essentials.
+**Cloud and AI**
+- AWS Certified Machine Learning
+- AWS Cloud Practitioner Essentials
+- Oracle Cloud Infrastructure AI Foundations Associate
+- Snowflake Generative AI Professional
+- Google Cloud AI
+- Microsoft Azure AI Essentials
 
-**Software engineering:** HackerRank Software Engineer, HackerRank Problem Solving (Intermediate).
+**Software engineering**
+- HackerRank Software Engineer
+- HackerRank Problem Solving (Intermediate)
 
-**Job simulations:** Advanced Software Engineering at Walmart USA (Forage), Software Engineering at BlackBird, Technology at Deloitte Australia.
+**Job simulations**
+- Advanced Software Engineering, Walmart USA (Forage)
+- Software Engineering, BlackBird
+- Technology, Deloitte Australia
 
 ## On GitHub
 

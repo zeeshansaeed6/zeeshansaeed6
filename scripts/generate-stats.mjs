@@ -21,7 +21,6 @@ const QUERY = `
 query ($login: String!, $cursor: String) {
   user(login: $login) {
     pullRequests { totalCount }
-    issues { totalCount }
     contributionsCollection {
       totalCommitContributions
       contributionCalendar {
@@ -117,7 +116,6 @@ const summarise = (user) => {
       ["Contributions (last year)", collection.contributionCalendar.totalContributions],
       ["Commits (last year)", collection.totalCommitContributions],
       ["Pull requests", user.pullRequests.totalCount],
-      ["Issues", user.issues.totalCount],
       ["Repositories", user.repositories.totalCount],
       ["Stars earned", repos.reduce((sum, repo) => sum + repo.stargazerCount, 0)],
     ],

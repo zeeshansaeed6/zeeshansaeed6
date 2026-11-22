@@ -1,7 +1,7 @@
 name: Generate profile assets
 
-# Builds the contribution snake and the GitHub stats cards, then publishes them
-# to the `output` branch that the README points at.
+# Builds the contribution snake, the GitHub stats cards and the LeetCode card,
+# then publishes them to the `output` branch that the README points at.
 
 on:
   schedule:
@@ -13,6 +13,7 @@ on:
     paths:
       - .github/workflows/snake.yml
       - scripts/generate-stats.mjs
+      - scripts/generate-leetcode.mjs
       - scripts/theme.mjs
       - assets/fonts/**
 
@@ -41,6 +42,11 @@ jobs:
           # Optional: add a STATS_TOKEN secret (a classic PAT with read:user)
           # to include private contributions. Falls back to the workflow token.
           GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Generate LeetCode card
+        run: node scripts/generate-leetcode.mjs dist
+        env:
+          LEETCODE_USER: zeeshansaeed06
 
       - uses: Platane/snk/svg-only@v3
         with:

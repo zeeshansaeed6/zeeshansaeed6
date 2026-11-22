@@ -113,12 +113,12 @@ const octagram = (cx, cy, r) => {
 
 const renderHero = (theme) => {
   const width = 1000;
-  const height = 300;
+  const height = 264;
   const cell = 64;
   // The lattice grows outward from one brass star.
-  const origin = { x: 1000 - 10 - cell * 2, y: 22 + cell * 2 };
+  const origin = { x: 1000 - 10 - cell * 2, y: 4 + cell * 2 };
   const stars = [];
-  for (let cy = 22; cy < height + cell; cy += cell) {
+  for (let cy = 4; cy < height + cell; cy += cell) {
     for (let cx = 1000 - 10; cx > 660; cx -= cell) {
       const distance = Math.hypot(cx - origin.x, cy - origin.y);
       stars.push(`<path class="s" style="animation-delay:${round(0.3 + distance / 380)}s" d="${octagram(cx, cy, cell / 2)}"/>`);
@@ -141,11 +141,11 @@ const renderHero = (theme) => {
 <mask id="r"><rect x="0" y="0" width="${width}" height="${height}" fill="url(#glow)"/></mask>
 </defs>
 <g mask="url(#m)"><g mask="url(#r)">${stars.join("").replaceAll("<path", '<path pathLength="1"')}</g><path class="b" d="${brass}"/></g>
-${text({ x: 0, y: 132, value: HERO.name, font: FONTS.display, size: nameSize, fill: theme.text, extra: ' letter-spacing="-1"' })}
-${text({ x: 2, y: 186, value: HERO.role, font: FONTS.text, size: 25, fill: theme.text })}
-${text({ x: 2, y: 224, value: HERO.now, font: FONTS.text, size: 18, fill: theme.muted })}
-<circle cx="9" cy="256" r="5" fill="${theme.brass}"/>
-${text({ x: 24, y: 262, value: HERO.status, font: FONTS.textBold, size: 18, fill: theme.text })}`;
+${text({ x: 0, y: 96, value: HERO.name, font: FONTS.display, size: nameSize, fill: theme.text, extra: ' letter-spacing="-1"' })}
+${text({ x: 2, y: 150, value: HERO.role, font: FONTS.text, size: 25, fill: theme.text })}
+${text({ x: 2, y: 188, value: HERO.now, font: FONTS.text, size: 18, fill: theme.muted })}
+<circle cx="9" cy="220" r="5" fill="${theme.brass}"/>
+${text({ x: 24, y: 226, value: HERO.status, font: FONTS.textBold, size: 18, fill: theme.text })}`;
 
   if (measure(HERO.name, FONTS.display, nameSize) > 710) throw new Error("Hero name is too wide for the layout.");
   return svgDocument({
