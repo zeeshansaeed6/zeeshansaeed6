@@ -1,6 +1,6 @@
 <!-- Images are generated. Static ones: node scripts/build-assets.mjs. Stats and snake: .github/workflows/snake.yml -->
 
-<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/hero.svg"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/hero.svg" alt="Zeeshan Saeed. Full-stack and GenAI engineer in Hyderabad, India. Full-Stack Developer Intern at AccioJob and final-year BCA student. Open to internships and entry-level roles." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/hero.svg"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/hero.svg" alt="Zeeshan Saeed. Full-stack and GenAI engineer in Hyderabad, India. Software Developer Intern at AccioJob and final-year BCA student. Open to internships and entry-level roles." width="100%"></picture>
 
 **[zeeshansaeed.me](https://www.zeeshansaeed.me)** &emsp; [LinkedIn](https://linkedin.com/in/zeeshan-saeed0609) &emsp; [LeetCode](https://leetcode.com/u/zeeshansaeed06/) &emsp; [Email me](https://mail.google.com/mail/?view=cm&fs=1&to=saeedzeeshan2003@gmail.com&su=Hello%20Zeeshan)
 
@@ -8,7 +8,7 @@ I build backends that stay fast under load and AI features that do real work. Re
 
 ## Experience and education
 
-<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/experience.svg"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/experience.svg" alt="Full-Stack Developer Intern at AccioJob since May 2026: built 14+ REST endpoints in Node.js and Express with JWT auth and role-based access, cut average API latency by 32% by reworking MongoDB aggregation pipelines and indexes, and built modular React workflows. BCA at Osmania University, New Science Degree College, Hyderabad, Aug 2024 to Jun 2027, CGPA 8.43 out of 10." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/light/experience.svg"><img src="https://raw.githubusercontent.com/zeeshansaeed6/zeeshansaeed6/main/assets/dark/experience.svg" alt="Software Developer Intern at AccioJob since May 2026: built 14+ REST endpoints in Node.js and Express with JWT auth and role-based access, cut average API latency by 32% by reworking MongoDB aggregation pipelines and indexes, and built modular React workflows. BCA at Osmania University, New Science Degree College, Hyderabad, Aug 2024 to Jun 2027, CGPA 8.43 out of 10." width="100%"></picture>
 
 ## Projects
 

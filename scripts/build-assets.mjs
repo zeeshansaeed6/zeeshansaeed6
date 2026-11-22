@@ -13,7 +13,7 @@ import { FONTS, THEMES, measure, round, svgDocument, text, wrap } from "./theme.
 const HERO = {
   name: "Zeeshan Saeed",
   role: "Full-stack and GenAI engineer in Hyderabad, India",
-  now: "Full-Stack Developer Intern at AccioJob, final-year BCA student",
+  now: "Software Developer Intern at AccioJob, final-year BCA student",
   status: "Open to internships and entry-level roles",
 };
 
@@ -74,7 +74,7 @@ const TIMELINE = [
   {
     dates: "May 2026 – now",
     current: true,
-    title: "Full-Stack Developer Intern",
+    title: "Software Developer Intern",
     place: "AccioJob",
     points: [
       "Built 14+ REST endpoints in Node.js and Express with JWT authentication and role-based access control.",
